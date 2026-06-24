@@ -6,6 +6,8 @@ var speed         : int
 var dir           : Vector2
 var viewport_size : Vector2
 var last_collision: Object
+var time_in_left: float = 0;
+var time_in_right: float = 0;
 
 func _ready() -> void:
 	viewport_size = get_viewport_rect().size;
@@ -24,6 +26,8 @@ func serve (to: int) -> void:
 	speed = INIT_SPEED;
 
 func _physics_process(delta: float) -> void:
+	var prevPos = position;
+	
 	if speed > 0:
 		var collision = move_and_collide(dir.normalized() * speed * delta)
 		
@@ -34,7 +38,21 @@ func _physics_process(delta: float) -> void:
 				dir = new_direction(collider);
 			else:
 				dir = dir.bounce(collision.get_normal());
-			
+		
+		var viewport = get_viewport_rect();
+		
+		if position.x > viewport.size.x / 2:
+			time_in_left = 0;
+			time_in_right += delta;
+		else:
+			time_in_right = 0;
+			time_in_left += delta;
+		
+		if time_in_left > 4 || time_in_right > 4:
+			time_in_left = 0;
+			time_in_right = 0;
+			get_parent()._on_reset_timer_timeout();
+		
 func new_direction (collider: StaticBody2D) -> Vector2:
 	var new_dir = Vector2(0,0);
 	var dist = position.y - collider.position.y
