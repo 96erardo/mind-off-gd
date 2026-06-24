@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://gtwd5p6cqir4"]
+
+[ext_resource type="Script" uid="uid://bkmdn01nb4yak" path="res://dialog/dialog.gd" id="1_bhstc"]
+[ext_resource type="FontFile" uid="uid://bju5oto0q4ruk" path="res://utils/assets/fonts/dogica.ttf" id="2_vklsu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhstc"]
+bg_color = Color(0.6784314, 0.6627451, 0.6627451, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_ufroc"]
+font = ExtResource("2_vklsu")
+font_size = 6
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqev2"]
+bg_color = Color(0.6772949, 0.66288644, 0.66264534, 1)
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Dialog" type="Control" unique_id=2141948645]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bhstc")
+
+[node name="NameBox" type="Panel" parent="." unique_id=803894799]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_top = -62.0
+offset_right = 30.0
+offset_bottom = -42.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bhstc")
+
+[node name="Name" type="Label" parent="NameBox" unique_id=596444890]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 58.0
+offset_bottom = 13.0
+theme_override_fonts/font = ExtResource("2_vklsu")
+theme_override_font_sizes/font_size = 8
+text = "Name"
+label_settings = SubResource("LabelSettings_ufroc")
+
+[node name="DialogBox" type="Panel" parent="." unique_id=1861494160]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -45.0
+offset_right = -10.0
+offset_bottom = -5.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hqev2")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DialogBox" unique_id=489212808]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="Text" type="RichTextLabel" parent="DialogBox/ScrollContainer" unique_id=1518135242]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("2_vklsu")
+theme_override_font_sizes/normal_font_size = 6
+text = "Dialog Text"
+fit_content = true
+autowrap_mode = 2

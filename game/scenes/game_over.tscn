@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://cnuw3crj41f33"]
+
+[ext_resource type="Script" uid="uid://bgrjpdltjaamk" path="res://game/scripts/game_over.gd" id="1_2uo17"]
+[ext_resource type="Texture2D" uid="uid://w7iwj5lgtmie" path="res://utils/assets/images/game-over.png" id="2_ddrfs"]
+[ext_resource type="FontFile" uid="uid://bju5oto0q4ruk" path="res://utils/assets/fonts/dogica.ttf" id="3_rngju"]
+[ext_resource type="FontFile" uid="uid://cpxl7qgluexhq" path="res://utils/assets/fonts/dogicabold.ttf" id="4_eaq4i"]
+
+[node name="GameOver" type="Control" unique_id=1330803609]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2uo17")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1279373998]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=592403204]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -74.0
+offset_right = 63.116272
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ddrfs")
+expand_mode = 1
+
+[node name="Description" type="Label" parent="." unique_id=783595886]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = 18.0
+offset_right = 86.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rngju")
+theme_override_font_sizes/font_size = 4
+text = "Pong is a game invented in 1972.
+We are in big 2024 and you lost bro
+Think about that"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Retry" type="RichTextLabel" parent="." unique_id=1853646971]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = 56.0
+offset_right = -8.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_rngju")
+theme_override_fonts/bold_font = ExtResource("4_eaq4i")
+theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/bold_font_size = 8
+bbcode_enabled = true
+text = "Retry[b](R)[/b]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="RichTextLabel" parent="." unique_id=182168446]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 56.0
+offset_right = 94.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_rngju")
+theme_override_fonts/bold_font = ExtResource("4_eaq4i")
+theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/bold_font_size = 8
+bbcode_enabled = true
+text = "Menu[b](M)[/b]"
+horizontal_alignment = 1
+vertical_alignment = 1

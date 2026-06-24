@@ -1,0 +1,127 @@
+[gd_resource type="Resource" script_class="CutScene" format=3 uid="uid://br5v45jjcgh0y"]
+
+[ext_resource type="Script" uid="uid://bkigk2wj8a1fb" path="res://utils/scripts/cutscene/CutScene.gd" id="1_7y175"]
+[ext_resource type="Script" uid="uid://bywi0nufx4gx5" path="res://utils/scripts/cutscene/steps/CutSceneStep.gd" id="2_fdh4t"]
+[ext_resource type="Script" uid="uid://by27t78nvjt44" path="res://utils/scripts/cutscene/steps/TalkStep.gd" id="3_2has0"]
+[ext_resource type="Script" uid="uid://crdw2j2mfwt6t" path="res://utils/scripts/cutscene/steps/SlideImageStep.gd" id="4_03uec"]
+[ext_resource type="Script" uid="uid://bd5d1nj2po3u7" path="res://utils/scripts/cutscene/steps/WaitStep.gd" id="5_03uec"]
+[ext_resource type="Script" uid="uid://bcrch780mqhue" path="res://utils/scripts/cutscene/steps/ChangeImageStep.gd" id="6_1mq4m"]
+[ext_resource type="Script" uid="uid://c74thrbcl2fu" path="res://utils/scripts/cutscene/steps/HideImageStep.gd" id="7_26qbg"]
+[ext_resource type="Script" uid="uid://cm2f6ovg78nsy" path="res://utils/scripts/cutscene/steps/PlayStep.gd" id="8_0sf4h"]
+
+[sub_resource type="Resource" id="Resource_1mq4m"]
+script = ExtResource("3_2has0")
+name = "Carlos"
+text = "Ready ?"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_26qbg"]
+script = ExtResource("3_2has0")
+name = "You"
+text = "Ready"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_0sf4h"]
+script = ExtResource("4_03uec")
+path = "res://game/textures/serving_1.png"
+action = "slide_in"
+metadata/_custom_type_script = "uid://crdw2j2mfwt6t"
+
+[sub_resource type="Resource" id="Resource_ehiw3"]
+script = ExtResource("5_03uec")
+value = 1.0
+action = "wait"
+metadata/_custom_type_script = "uid://bd5d1nj2po3u7"
+
+[sub_resource type="Resource" id="Resource_pa7a7"]
+script = ExtResource("6_1mq4m")
+path = "res://game/textures/serving_2.png"
+action = "change_img"
+metadata/_custom_type_script = "uid://bcrch780mqhue"
+
+[sub_resource type="Resource" id="Resource_ky8gq"]
+script = ExtResource("5_03uec")
+value = 1.0
+action = "wait"
+metadata/_custom_type_script = "uid://bd5d1nj2po3u7"
+
+[sub_resource type="Resource" id="Resource_q86xw"]
+script = ExtResource("6_1mq4m")
+path = "res://game/textures/serving_3.png"
+action = "change_img"
+metadata/_custom_type_script = "uid://bcrch780mqhue"
+
+[sub_resource type="Resource" id="Resource_0kpk8"]
+script = ExtResource("5_03uec")
+value = 1.0
+action = "wait"
+metadata/_custom_type_script = "uid://bd5d1nj2po3u7"
+
+[sub_resource type="Resource" id="Resource_dd73b"]
+script = ExtResource("3_2has0")
+name = "You"
+text = "Whoa!! Whoa!! Whoaaa!!"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_s6xvc"]
+script = ExtResource("7_26qbg")
+action = "slide_out"
+metadata/_custom_type_script = "uid://c74thrbcl2fu"
+
+[sub_resource type="Resource" id="Resource_k7a05"]
+script = ExtResource("3_2has0")
+name = "Carlos"
+text = "What??!!"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_l22xl"]
+script = ExtResource("3_2has0")
+name = "You"
+text = "What da hell is that serve ?"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_74tyi"]
+script = ExtResource("3_2has0")
+name = "You"
+text = "Do you actually play this shit?"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_cwukm"]
+script = ExtResource("3_2has0")
+name = "Carlos"
+text = "Who's scared now ?"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_mrtod"]
+script = ExtResource("3_2has0")
+name = "You"
+text = "Ok, you want to play serious?"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_53v57"]
+script = ExtResource("3_2has0")
+name = "You"
+text = "Lets get serious"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_gevc2"]
+script = ExtResource("8_0sf4h")
+action = "play"
+metadata/_custom_type_script = "uid://cm2f6ovg78nsy"
+
+[resource]
+script = ExtResource("1_7y175")
+steps = Array[ExtResource("2_fdh4t")]([SubResource("Resource_1mq4m"), SubResource("Resource_26qbg"), SubResource("Resource_0sf4h"), SubResource("Resource_ehiw3"), SubResource("Resource_pa7a7"), SubResource("Resource_ky8gq"), SubResource("Resource_q86xw"), SubResource("Resource_0kpk8"), SubResource("Resource_dd73b"), SubResource("Resource_s6xvc"), SubResource("Resource_k7a05"), SubResource("Resource_l22xl"), SubResource("Resource_74tyi"), SubResource("Resource_cwukm"), SubResource("Resource_mrtod"), SubResource("Resource_53v57"), SubResource("Resource_gevc2")])
+metadata/_custom_type_script = "uid://bkigk2wj8a1fb"

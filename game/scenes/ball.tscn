@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dqgwswr8tikb4"]
+
+[ext_resource type="Script" uid="uid://br1h03w1q6ug5" path="res://game/scripts/ball.gd" id="1_7s4qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1dj2"]
+size = Vector2(8, 8)
+
+[node name="Ball" type="CharacterBody2D" unique_id=1344411278]
+script = ExtResource("1_7s4qf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=180463180]
+shape = SubResource("RectangleShape2D_n1dj2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=74539727]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0

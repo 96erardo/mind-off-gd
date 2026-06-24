@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cbibd1u2onyk1"]
+
+[ext_resource type="Texture2D" uid="uid://mxvy4yhi2gq6" path="res://office/images/players_sprites.png" id="1_nh2m4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nh2m4"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abqhh"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(17, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rv78h"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(0, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n8xq"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(34, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wlns"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(102, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tl2vt"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(119, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwkja"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(68, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tygy"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(51, 17, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sptji"]
+atlas = ExtResource("1_nh2m4")
+region = Rect2(85, 17, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v4e37"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abqhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rv78h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n8xq")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wlns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tl2vt")
+}],
+"loop": true,
+"name": &"walk_sides",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwkja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tygy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sptji")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="NPC" type="StaticBody2D" unique_id=1357741155]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=184618982]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_nh2m4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2119503616]
+sprite_frames = SubResource("SpriteFrames_v4e37")
+animation = &"walk_up"

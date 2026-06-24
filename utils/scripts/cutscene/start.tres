@@ -1,0 +1,262 @@
+[gd_resource type="Resource" script_class="CutScene" format=3 uid="uid://bxk22lx7uqaa3"]
+
+[ext_resource type="Script" uid="uid://bkigk2wj8a1fb" path="res://utils/scripts/cutscene/CutScene.gd" id="1_m61e2"]
+[ext_resource type="Script" uid="uid://bywi0nufx4gx5" path="res://utils/scripts/cutscene/steps/CutSceneStep.gd" id="2_uciru"]
+[ext_resource type="Script" uid="uid://icvh28atj5n4" path="res://utils/scripts/cutscene/steps/MoveStep.gd" id="3_uciru"]
+[ext_resource type="Script" uid="uid://bd5d1nj2po3u7" path="res://utils/scripts/cutscene/steps/WaitStep.gd" id="4_gm1ym"]
+[ext_resource type="Script" uid="uid://dji8fht1di8np" path="res://utils/scripts/cutscene/steps/TurnStep.gd" id="5_0wp6q"]
+[ext_resource type="Script" uid="uid://by27t78nvjt44" path="res://utils/scripts/cutscene/steps/TalkStep.gd" id="6_0wp6q"]
+
+[sub_resource type="Resource" id="Resource_xkhwq"]
+script = ExtResource("4_gm1ym")
+value = 2.2
+action = "wait"
+metadata/_custom_type_script = "uid://bd5d1nj2po3u7"
+
+[sub_resource type="Resource" id="Resource_cog85"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "Here he comes..."
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_g6s0u"]
+script = ExtResource("3_uciru")
+character = "NPC"
+dir = "RIGHT"
+value = 8
+action = "move"
+metadata/_custom_type_script = "uid://icvh28atj5n4"
+
+[sub_resource type="Resource" id="Resource_1fcql"]
+script = ExtResource("3_uciru")
+character = "NPC"
+dir = "UP"
+value = 2
+action = "move"
+metadata/_custom_type_script = "uid://icvh28atj5n4"
+
+[sub_resource type="Resource" id="Resource_lj7cm"]
+script = ExtResource("4_gm1ym")
+value = 1.0
+action = "wait"
+metadata/_custom_type_script = "uid://bd5d1nj2po3u7"
+
+[sub_resource type="Resource" id="Resource_et3fe"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "???"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_0r6sn"]
+script = ExtResource("3_uciru")
+character = "NPC"
+dir = "RIGHT"
+value = 3
+action = "move"
+metadata/_custom_type_script = "uid://icvh28atj5n4"
+
+[sub_resource type="Resource" id="Resource_0wp6q"]
+script = ExtResource("3_uciru")
+character = "NPC"
+dir = "UP"
+value = 2
+action = "move"
+metadata/_custom_type_script = "uid://icvh28atj5n4"
+
+[sub_resource type="Resource" id="Resource_gm1ym"]
+script = ExtResource("4_gm1ym")
+value = 1.0
+action = "wait"
+metadata/_custom_type_script = "uid://bd5d1nj2po3u7"
+
+[sub_resource type="Resource" id="Resource_r3tjw"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "Why the hell is there a ping pong table in the office ?"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_nny2n"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "So..."
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_hanwo"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "You noticed..."
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_wqvnl"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "You and me are going to handle some business that happened here yesterday"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_yjhkg"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "Its time to settle it."
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_1tot3"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "Settle what ??!!"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_feiyc"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "What did I say yesterday ??!!"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_x5ahp"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "Its not what you said..."
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_p6kft"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "Its HOW you said it..."
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_bui46"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "..."
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_sw65n"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "You gay ?"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_khpwm"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "You scared ?"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_jmb15"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "Is there a difference ?"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_23w3k"]
+script = ExtResource("5_0wp6q")
+character = "NPC"
+dir = "LEFT"
+action = "turn"
+metadata/_custom_type_script = "uid://dji8fht1di8np"
+
+[sub_resource type="Resource" id="Resource_s464j"]
+script = ExtResource("4_gm1ym")
+value = 1.0
+action = "wait"
+metadata/_custom_type_script = "uid://bd5d1nj2po3u7"
+
+[sub_resource type="Resource" id="Resource_tmkrb"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "Where did you get that table anyways ?"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_70xha"]
+script = ExtResource("3_uciru")
+character = "Character"
+dir = "DOWN"
+value = 1
+action = "move"
+metadata/_custom_type_script = "uid://icvh28atj5n4"
+
+[sub_resource type="Resource" id="Resource_omydb"]
+script = ExtResource("5_0wp6q")
+character = "Character"
+dir = "LEFT"
+action = "turn"
+metadata/_custom_type_script = "uid://dji8fht1di8np"
+
+[sub_resource type="Resource" id="Resource_im8wo"]
+script = ExtResource("4_gm1ym")
+value = 0.5
+action = "wait"
+metadata/_custom_type_script = "uid://bd5d1nj2po3u7"
+
+[sub_resource type="Resource" id="Resource_6ovxa"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "I brought it here from the cowork's public space"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_ov6bu"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "How are we going to play if the table is next to the wall?"
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_l3twl"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "So you ARE scared!"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_2luw8"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "..."
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_3s4aq"]
+script = ExtResource("6_0wp6q")
+name = "You"
+text = "Common we'll move things around to make it fit"
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[sub_resource type="Resource" id="Resource_nayfm"]
+script = ExtResource("6_0wp6q")
+name = "Carlos"
+text = "Ok..."
+pos = 1
+action = "talk"
+metadata/_custom_type_script = "uid://by27t78nvjt44"
+
+[resource]
+script = ExtResource("1_m61e2")
+steps = Array[ExtResource("2_uciru")]([SubResource("Resource_xkhwq"), SubResource("Resource_cog85"), SubResource("Resource_g6s0u"), SubResource("Resource_1fcql"), SubResource("Resource_lj7cm"), SubResource("Resource_et3fe"), SubResource("Resource_0r6sn"), SubResource("Resource_0wp6q"), SubResource("Resource_gm1ym"), SubResource("Resource_r3tjw"), SubResource("Resource_nny2n"), SubResource("Resource_hanwo"), SubResource("Resource_wqvnl"), SubResource("Resource_yjhkg"), SubResource("Resource_1tot3"), SubResource("Resource_feiyc"), SubResource("Resource_x5ahp"), SubResource("Resource_p6kft"), SubResource("Resource_bui46"), SubResource("Resource_sw65n"), SubResource("Resource_khpwm"), SubResource("Resource_jmb15"), SubResource("Resource_23w3k"), SubResource("Resource_s464j"), SubResource("Resource_tmkrb"), SubResource("Resource_70xha"), SubResource("Resource_omydb"), SubResource("Resource_im8wo"), SubResource("Resource_6ovxa"), SubResource("Resource_ov6bu"), SubResource("Resource_l3twl"), SubResource("Resource_2luw8"), SubResource("Resource_3s4aq"), SubResource("Resource_nayfm")])
+metadata/_custom_type_script = "uid://bkigk2wj8a1fb"

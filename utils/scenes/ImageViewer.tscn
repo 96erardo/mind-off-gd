@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://be6nrsiy502bg"]
+
+[ext_resource type="Script" uid="uid://bxvli3gei0x8d" path="res://utils/scripts/image_viewer.gd" id="1_88cun"]
+
+[sub_resource type="Animation" id="Animation_5l3ae"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(320, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_v6xsr"]
+resource_name = "Slide_In"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333335),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(320, 0), Vector2(160, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2kl1n"]
+resource_name = "Slide_Out"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(160, 0), Vector2(320, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2a2e8"]
+_data = {
+&"RESET": SubResource("Animation_5l3ae"),
+&"Slide_In": SubResource("Animation_v6xsr"),
+&"Slide_Out": SubResource("Animation_2kl1n")
+}
+
+[node name="ImageViewer" type="Control" unique_id=743019623]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_88cun")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2033942160]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_right = 159.99997
+grow_horizontal = 0
+grow_vertical = 2
+expand_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1956972364]
+libraries/ = SubResource("AnimationLibrary_2a2e8")

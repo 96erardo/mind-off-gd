@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://byel70ta52oc8"]
+
+[ext_resource type="Script" uid="uid://ccrkya5qt08l" path="res://game/scripts/main.gd" id="1_ejk4j"]
+[ext_resource type="PackedScene" uid="uid://dqgwswr8tikb4" path="res://game/scenes/ball.tscn" id="2_l3qal"]
+[ext_resource type="PackedScene" uid="uid://3d6v4bqq5xgn" path="res://game/scenes/paddle.tscn" id="3_uk16q"]
+[ext_resource type="Script" uid="uid://w705h66x7q3b" path="res://game/scripts/player.gd" id="4_7j1va"]
+[ext_resource type="Script" uid="uid://v54rs7m85vpn" path="res://game/scripts/cpu.gd" id="5_rmvmd"]
+[ext_resource type="PackedScene" uid="uid://gtwd5p6cqir4" path="res://dialog/Dialog.tscn" id="6_l3qal"]
+[ext_resource type="PackedScene" uid="uid://be6nrsiy502bg" path="res://utils/scenes/ImageViewer.tscn" id="7_uk16q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tefeu"]
+size = Vector2(319, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xl0"]
+size = Vector2(319, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
+size = Vector2(15, 207)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tipki"]
+size = Vector2(16, 207)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tbgi4"]
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_tefeu"]
+font_size = 20
+
+[node name="Main" type="Node" unique_id=1514663421]
+script = ExtResource("1_ejk4j")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2086339731]
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
+[node name="Ball" parent="." unique_id=1344411278 instance=ExtResource("2_l3qal")]
+position = Vector2(160, 90)
+collision_layer = 3
+collision_mask = 3
+
+[node name="UserPaddle" parent="." unique_id=739233345 instance=ExtResource("3_uk16q")]
+position = Vector2(24, 90)
+script = ExtResource("4_7j1va")
+
+[node name="CPUPaddle" parent="." unique_id=1766204055 instance=ExtResource("3_uk16q")]
+position = Vector2(296, 90)
+script = ExtResource("5_rmvmd")
+
+[node name="UpperWall" type="StaticBody2D" parent="." unique_id=561073289]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall" unique_id=1955025182]
+position = Vector2(159.5, -7.5)
+shape = SubResource("RectangleShape2D_tefeu")
+
+[node name="DownWall" type="StaticBody2D" parent="." unique_id=1798260682]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownWall" unique_id=933208221]
+position = Vector2(159.5, 186)
+shape = SubResource("RectangleShape2D_o6xl0")
+
+[node name="LeftScore" type="Area2D" parent="." unique_id=816987052]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftScore" unique_id=1189244229]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-7, 89)
+shape = SubResource("RectangleShape2D_tbgi4")
+
+[node name="RightScore" type="Area2D" parent="." unique_id=471276936]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(342, 293)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightScore" unique_id=2125989182]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-14, -204.5)
+shape = SubResource("RectangleShape2D_tipki")
+
+[node name="LScore" type="Label" parent="." unique_id=1424313606]
+offset_left = 132.0
+offset_top = 10.0
+offset_right = 152.0
+offset_bottom = 38.0
+text = "0"
+label_settings = SubResource("LabelSettings_tbgi4")
+horizontal_alignment = 1
+
+[node name="RScore" type="Label" parent="." unique_id=66401571]
+offset_left = 168.0
+offset_top = 10.0
+offset_right = 189.0
+offset_bottom = 38.0
+text = "0"
+label_settings = SubResource("LabelSettings_tefeu")
+horizontal_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1586470925]
+
+[node name="Dialog" parent="CanvasLayer" unique_id=496938364 instance=ExtResource("6_l3qal")]
+visible = false
+
+[node name="BallTimer" type="Timer" parent="." unique_id=1603083332]
+one_shot = true
+
+[node name="ResetTimer" type="Timer" parent="." unique_id=1625086619]
+one_shot = true
+
+[node name="ImageViewer" parent="." unique_id=743019623 instance=ExtResource("7_uk16q")]
+
+[connection signal="body_entered" from="LeftScore" to="." method="_on_left_score_body_entered"]
+[connection signal="body_entered" from="RightScore" to="." method="_on_right_score_body_entered"]
+[connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]
+[connection signal="timeout" from="ResetTimer" to="." method="_on_reset_timer_timeout"]
